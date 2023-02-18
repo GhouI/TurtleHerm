@@ -1,5 +1,4 @@
 const { Events, PermissionFlagsBits, EmbedBuilder, Colors, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType, StringSelectMenuBuilder } = require('discord.js')
-
 const { PlayersAttacks, doesAttackExist, checkPlayerStatus, getValidAttacks, getAttack, ChooseRandomMove, getMobType } = require('../util/Modules/Game/GameModules')
 
 const PlayerModel = require('../util/Mongoose/models/Player')
@@ -146,11 +145,84 @@ module.exports = {
                 if (PlayerInventoryMoves.length == 0) {
                     let TheEmbed = await client.UtilFunctions.createTempEmbed(Player.username, Player.displayAvatarURL(), 'Red', 'You have no moves saved.')
                     return interaction.reply({ embeds: [TheEmbed] })
+
+
                 }
+            } else if (interaction.customId == "viewcurrentplayerarmor") {
+                let Player = interaction.user
+                let { PlayerArmor } = await PlayerModel.findOne({ ServerID: interaction.guild.id, UserID: Player.id })
+                let Comp = []
+                let RemoveAllArmorButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('removeallarmor').setLabel('Remove All of your current armor.').setStyle(ButtonStyle.Danger))
+                let RemoveTopButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('removetoparmor').setLabel('Remove your top armor').setStyle(ButtonStyle.Danger))
+                let RemoveHeadButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('removeheadarmor').setLabel('Remove your head armor.').setStyle(ButtonStyle.Danger))
+                let RemoveBottomButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('removebottomarmor').setLabel('Remove All of your bottom armor.').setStyle(ButtonStyle.Danger))
+                switch (true) {
+                    case typeof(PlayerArmor.Head) === 'object':
+                        Comp.push(RemoveHeadButton)
+                        break;
+                    case typeof(PlayerArmor.Top) === 'object':
+                        Comp.push(new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('removetoparmor').setLabel('Remove your top armor').setStyle(ButtonStyle.Danger)))
+                        break;
+                    case typeof(PlayerArmor.Bottom) === 'object':
+                        Comp.push(RemoveBottomButton)
+                        break;
+                    default:
+                        console.log(Comp.length)
+                        if (Comp.length >= 2) {
+                            Comp.push(RemoveAllArmorButton)
+                        }
+                }
+                let theEmbed = new EmbedBuilder()
+                    .setTitle("Equipped Armor")
+                    .setAuthor({
+                        name: Player.username,
+                        iconURL: Player.displayAvatarURL()
+                    })
+                    .addFields({
+                        name: 'Head',
+                        value: PlayerArmor.Head.Name ? PlayerArmor.Head.Name : 'None'
+                    }, {
+                        name: 'Top',
+                        value: PlayerArmor.Top.Name ? PlayerArmor.Top.Name : 'None'
+                    }, {
+                        name: 'Bottom',
+                        value: PlayerArmor.Bottom.Name ? PlayerArmor.Bottom.Name : 'None'
+                    });
 
-                //need to do for when they have more moves.
-
+                return interaction.reply({ embeds: [theEmbed], components: Comp })
             }
+
+            if (interaction.customId.substring(0, 'remove'.length) === 'remove') {
+                let Player = interaction.user
+                let { PlayerArmor } = await PlayerModel.findOne({ ServerID: interaction.guild.id, UserID: Player.id })
+                let suffix = interaction.customId.substring('remove'.length).trim();
+                switch (suffix) {
+                    case 'allarmor':
+                        removeArmorAndEffects()
+                        PlayerArmor = {
+                            'Top': 'None',
+                            'Head': 'None',
+                            'Bottom': 'None'
+                        }
+                        await PlayerModel.updateOne({ ServerID: interaction.guild.id, UserID: Player.id }, {
+                            $set: {
+                                PlayerArmor: PlayerArmor
+                            }
+                        })
+                        return interaction.reply("All of your armor has been removed.")
+                    case 'toparmor':
+                        removeArmorAndEffects()
+                        PlayerArmor.Top = 'None'
+                        await PlayerModel.updateOne({ ServerID: interaction.guild.id, UserID: Player.id }, {
+                            $set: {
+                                PlayerArmor: PlayerArmor
+                            }
+                        })
+                        return interaction.reply("All of your armor has been removed.")
+                }
+            }
+
+            //need to do for when they have more moves.
         } else if (interaction.isStringSelectMenu()) {
             if (interaction.customId == "MobMenuAttack") {
                 let Player = interaction.user
@@ -274,3 +346,7 @@ module.exports = {
             { "Name": "Punch", "Description": "Using your Fist", "Damage": 150, "StaminaCost": 10, "Cost": 0, "AccurayRate": 55 }
 
 */
+
+function removeArmorAndEffects({ Top, Head, Bottom }) {
+    if (Top == 'None' && Head == 'None' && Bottom == 'None') return "No armor"
+}

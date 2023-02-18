@@ -12,7 +12,8 @@ const Player = new Mongoose.Schema({
     PlayerHealth: { type: Object, required: true }, //Includes Player Health, Player Max Health, Player Stamina, Player Max Stamina, Player Ki, Player Max Ki
     PlayerStats: { type: Object, required: true }, //Includes Remaining Points, Strength, Speed, Defense, Ki Control
     PlayerMoveSet: { type: Object, required: true }, //The 4 Moveset for the Player
-    PlayerInventoryMoves: { type: Array, required: false }
+    PlayerInventoryMoves: { type: Array, required: false },
+    PlayerArmor: { type: Object, required: true } //Armor Set
 }, { collection: 'PlayerData' })
 
 

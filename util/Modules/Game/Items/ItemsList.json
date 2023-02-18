@@ -5,7 +5,7 @@
             "Cost": 10,
             "Name": "Common Healing Potion",
             "Description": "A simple potion that can restore a small amount of health.",
-            "Now Value": 20
+            "Effect": 15
         },
         {
             "ItemId": "2",
@@ -13,7 +13,7 @@
             "Cost": 15,
             "Name": "Common Healing Salve",
             "Description": "A basic salve that can heal wounds and restore health.",
-            "Now Value": 25
+            "Effect": 19
         },
         {
             "ItemId": "3",
@@ -21,7 +21,7 @@
             "Cost": 20,
             "Name": "Common Health Draught",
             "Description": "A standard health draught that can recover a moderate amount of health.",
-            "Now Value": 0
+            "Effect": 25
         },
         {
             "ItemId": "4",
@@ -29,7 +29,7 @@
             "Cost": 30,
             "Name": "Senzu Bean",
             "Description": "A magical bean that can fully restore a person's health and energy.",
-            "Now Value": 40
+            "Effect": 100
         },
         {
             "ItemId": "5",
@@ -37,7 +37,7 @@
             "Cost": 50,
             "Name": "Specialised Healing Ball",
             "Description": "A dragon ball that, when collected with six others, can grant a wish for full health restoration.",
-            "Now Value": 60
+            "Effect": 88
         },
         {
             "ItemId": "6",
@@ -45,32 +45,32 @@
             "Cost": 100,
             "Name": "Healing Earring",
             "Description": "A powerful item that can instantly heal and grant the wearer increased power and health.",
-            "Now Value": 150
+            "Effect": 600
         }
     ],
-    "Attacks": [{
-        "ItemID": "29",
-        "Rarity": "Common",
-        "Cost": 12,
-        "Name": "Plastic Sword",
-        "Description": "Plastic Sword.",
-        "Now Value": 0
-    }],
     "Armor": [{
             "ItemId": "15",
             "Rarity": "Rare",
             "Cost": 50,
             "Name": "Majin Armor",
             "Description": "Armor infused with the power of the Majin race, providing increased strength and durability.",
-            "Now Value": 60
+            "Effect": {
+                "ArmorType": "Top",
+                "EffectType": "Health",
+                "EffectValue": 600
+            }
         },
         {
             "ItemId": "16",
             "Rarity": "Uncommon",
             "Cost": 30,
-            "Name": "Namekian Armor",
+            "Name": "Namekian Helmet",
             "Description": "Armor made from the durable skin of the Namekian race, providing increased defense and resistance.",
-            "Now Value": 40
+            "Effect": {
+                "ArmorType": "Head",
+                "EffectType": "Health",
+                "EffectValue": 75
+            }
         },
         {
             "ItemId": "17",
@@ -78,15 +78,23 @@
             "Cost": 50,
             "Name": "Saiyan Armor",
             "Description": "Armor made from advanced Saiyan technology, providing increased power and resistance to energy attacks.",
-            "Now Value": 65
+            "Effect": {
+                "ArmorType": "Top",
+                "EffectType": "Health",
+                "EffectValue": 400
+            }
         },
         {
             "ItemId": "18",
             "Rarity": "Legendary",
             "Cost": 100,
-            "Name": "Time Breaker Armor",
+            "Name": "Time Breaker Bottom",
             "Description": "A powerful and ancient armor that can manipulate time and grant immense power to the wearer.",
-            "Now Value": 150
+            "Effect": {
+                "ArmorType": "Bottom",
+                "EffectType": "Health",
+                "EffectValue": 900
+            }
         },
         {
             "ItemId": "13",
@@ -94,7 +102,11 @@
             "Cost": 20,
             "Name": "Weighted Clothing",
             "Description": "Heavy clothing that can increase the wearer's strength and power.",
-            "Now Value": 30
+            "Effect": {
+                "ArmorType": "Top",
+                "EffectType": "Health",
+                "EffectValue": 25
+            }
         }
     ]
 }

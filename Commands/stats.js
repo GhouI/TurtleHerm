@@ -14,8 +14,10 @@ module.exports = {
         if (interaction.options.getString('statsType') == null) {
             let PlayerInventoryButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('viewplayerinventory').setLabel('Inventory').setStyle(ButtonStyle.Secondary))
             let PlayerStatsPointButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('viewplayerstatspoint').setLabel('Stats Points').setStyle(ButtonStyle.Secondary))
-            let PlayerMoveSetButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('viewplayermoveset').setLabel('Your Selected Movesets').setStyle(ButtonStyle.Secondary))
-            let PlayerInventoryMovesButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('viewplayersallmoveset').setLabel('View all your moves.').setStyle(ButtonStyle.Secondary))
+            let PlayerMoveSetButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('viewplayermoveset').setLabel('Selected Movesets').setStyle(ButtonStyle.Secondary))
+            let PlayerInventoryMovesButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('viewplayersallmoveset').setLabel('All of your movesets.').setStyle(ButtonStyle.Secondary))
+            let CurrentArmorEquippedButton = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('viewcurrentplayerarmor').setLabel('Current equipped armor.').setStyle(ButtonStyle.Secondary))
+
             return interaction.reply({
                 embeds: [
                     new EmbedBuilder()
@@ -57,7 +59,7 @@ module.exports = {
                         inline: true,
                     })
                 ],
-                components: [PlayerInventoryButton, PlayerStatsPointButton, PlayerMoveSetButton, PlayerInventoryMovesButton]
+                components: [PlayerInventoryButton, PlayerStatsPointButton, PlayerMoveSetButton, PlayerInventoryMovesButton, CurrentArmorEquippedButton]
             })
         }
     }

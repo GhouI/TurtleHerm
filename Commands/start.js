@@ -36,6 +36,11 @@ module.exports = {
                 "S2": "None",
                 "S3": "None",
                 "S4": "None",
+            },
+            PlayerArmor: {
+                "Head": "None",
+                "Top": "None",
+                "Bottom": "None"
             }
         }).save().then(() => interaction.reply("Your account has been created."))
     }
