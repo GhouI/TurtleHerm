@@ -6,16 +6,18 @@ const path = require('node:path')
 
 const eventsFolder = path.join(__dirname, 'events')
 const CommandsFolder = path.join(__dirname, 'Commands')
+const isButtonFolder = path.join(__dirname, 'events', 'Interaction', 'isButton()');
 const evntsFiles = fs.readdirSync(eventsFolder).filter(file => file.endsWith('.js'))
 const cmdFiles = fs.readdirSync(CommandsFolder).filter(file => file.endsWith('.js'))
-client.commands = new Collection()
+const ButtonFiles = fs.readdirSync(isButtonFolder).filter(file => file.endsWith('.js'))
 
-client.on("messageCreate", (message) => {
-    message.guild.members.me.permissionsIn(message.channelId).has([PermissionFlagsBits.SendMessages])
-})
+client.commands = new Collection()
+client.ButtonEventsName = new Collection()
+
+
+
 client.on("ready", () => {
     console.log("The bot is ready!.")
-    namesOfCommands = []
     for (const file of evntsFiles) {
         const filePath = path.join(eventsFolder, file)
         const event = require(filePath)
@@ -30,17 +32,18 @@ client.on("ready", () => {
         const command = require(filePath)
         if ('data' in command && 'execute' in command) {
             client.commands.set(command.data.name, command)
-            namesOfCommands.push(command.data.name)
         } else {
             console.log(filePath + "is missing some properties.")
         }
     }
-
+    for (const file of ButtonFiles) {
+        const ButtonFile = require(path.join(isButtonFolder, file))
+        client.ButtonEventsName.set(ButtonFile.customId, ButtonFile)
+    }
     client.UtilFunctions = require('./util/functions.js')
     client.UtilFunctions.init(client)
     client.cooldown = new Set()
     client.PlayerAttacked = new Set();
-    client.MobAttack = new Set()
 })
 
 client.login("MTAzMjAxNDA4OTUxOTY0ODc2OA.GT_jMF.n3NR3Xs8O2Va-se-Npb84ziKPya7cgSLWJMljI")
