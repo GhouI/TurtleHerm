@@ -1,0 +1,20 @@
+{
+    "Physical": {
+        "NumberOfAttacks": 1,
+        "ListOfAttacks": [
+            { "Name": "Punch", "Description": "Using your Fist", "Damage": 150, "StaminaCost": 10, "Cost": 0, "AccurayRate": 55 }
+        ]
+    },
+    "Ki": {
+        "NumberOfAttacks": 1,
+        "ListOfAttacks": [
+            { "Name": "Ki Blast", "Description": "Simple Ki Blast", "Damage": 175, "StaminaCost": 15, "Cost": 0, "AccurayRate": 55 }
+        ]
+    },
+    "Weapons": {
+        "NumberOfAttacks": 1,
+        "ListOfAttacks": [
+            { "Name": "Plastic Sword", "Description": "Simple Ki Blast", "Damage": 150, "StaminaCost": 10, "Cost": 1500, "AccurayRate": 45, "Materials": [] }
+        ]
+    }
+}

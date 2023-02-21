@@ -1,0 +1,1371 @@
+{
+    "earth": {
+        "AllSagaNames": ["Saiyan"],
+        "RarityLevel": 55,
+        "Sagas": {
+            "Saiyan": {
+                "ArcName": "Saiyan",
+                "Age": 762,
+                "MaxMobs": 50,
+                "MaxSemiBosses": 4,
+                "MaxBosses": 3,
+                "MobData": {
+                    "NormalMob": [{
+                        "Name": "Saibaman",
+                        "Description": "Saibaman is green, humanoid creatures that grow from a planted seed placed in the ground.",
+                        "Health": 1000,
+                        "MaxHealth": 1000,
+                        "Stamina": 6000,
+                        "MaxStamina": 6000,
+                        "Speed": 5,
+                        "Moves": [{
+                                "Name": "Ki-Blast",
+                                "Damage": 75,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Punch",
+                                "Damage": 65,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }
+                        ],
+                        "Level": 1,
+                        "Exp": 0,
+                        "MaxExp": 1500,
+                        "Exp Gain": 250,
+                        "ImageURL": "https://i.imgur.com/8xJii2C.png",
+                        "BaseDamage": 100
+                    }, {
+                        "Name": "Kyukonman",
+                        "Description": "???",
+                        "Health": 5000,
+                        "MaxHealth": 5000,
+                        "Stamina": 21000,
+                        "MaxStamina": 21000,
+                        "Speed": 10,
+                        "Moves": [{
+                                "Name": "Ki-Blast",
+                                "Damage": 75,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Punch",
+                                "Damage": 65,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }
+                        ],
+                        "Level": 5,
+                        "Exp": 0,
+                        "MaxExp": 5500,
+                        "Exp Gain": 650,
+                        "ImageURL": "https://i.imgur.com/dAoMkBT.png",
+                        "BaseDamage": 500
+                    }],
+                    "SemiMob": [{
+                        "Name": "Raditz",
+                        "Description": "???",
+                        "Health": 4500,
+                        "MaxHealth": 4500,
+                        "Stamina": 2100,
+                        "MaxStamina": 2100,
+                        "Speed": 5,
+                        "Moves": [{
+                                "Name": "Ki-Blast",
+                                "Damage": 75,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Punch",
+                                "Damage": 65,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Double Sunday",
+                                "Damage": 150,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 10,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1200,
+                        "ImageURL": "https://i.imgur.com/z4lxYaq.png",
+                        "BaseDamage": 450
+                    }, {
+                        "Name": "Nappa",
+                        "Description": "???",
+                        "Health": 7500,
+                        "MaxHealth": 7500,
+                        "Stamina": 2100,
+                        "MaxStamina": 2100,
+                        "Speed": 5,
+                        "Moves": [{
+                                "Name": "Ki-Blast",
+                                "Damage": 75,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Punch",
+                                "Damage": 65,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Volcan Explosion",
+                                "Damage": 250,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 15,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://i.imgur.com/ffdZqtq.jpg",
+                        "BaseDamage": 750
+                    }],
+                    "Bosses": [{
+                        "Name": "Vegeta",
+                        "Description": "???",
+                        "Health": 10000,
+                        "MaxHealth": 10000,
+                        "Stamina": 2100,
+                        "MaxStamina": 2100,
+                        "Speed": 5,
+                        "Moves": [{
+                                "Name": "Ki-Blast",
+                                "Damage": 75,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Punch",
+                                "Damage": 65,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Galick Gun",
+                                "Damage": 550,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 20,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 3500,
+                        "ImageURL": "https://i.imgur.com/DJN6y7i.png",
+                        "BaseDamage": 1035
+                    }]
+                }
+            },
+            "Android": {
+                "ArcName": "Android",
+                "Age": 764,
+                "MaxMobs": 25,
+                "MaxSemiBosses": 35,
+                "MaxBosses": 10,
+                "MobData": {
+                    "NormalMob": [{
+                        "Name": "Robot Frieza",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/zLU7GYN.png",
+                        "BaseDamage": 4500
+                    }, {
+                        "Name": "King Cold",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 2500
+                    }],
+                    "SemiMob": [{
+                        "Name": "Android 19",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": "Infinity",
+                        "MaxStamina": "Infinity",
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/AQbiv8o.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Dr Gero",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/wkzuEzD.png",
+                        "BaseDamage": 2500
+                    }],
+                    "Bosses": [{
+                        "Name": "Android 16",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/4w58xGr.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Android 17",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/OASbnSQ.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Android 18",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/Ulm8dEA.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "First Form Cell",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/ffAcLvA.png",
+                        "BaseDamage": 3500
+                    }]
+                }
+            },
+            "CellSaga": {
+                "ArcName": "CellSaga",
+                "Age": 767,
+                "MaxMobs": 35,
+                "MaxSemiBosses": 45,
+                "MaxBosses": 5,
+                "MobData": {
+                    "NormalMob": [{
+                        "Name": "First Form Cell",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/ffAcLvA.png",
+                        "BaseDamage": 3500
+                    }],
+                    "SemiMob": [{
+                        "Name": "Second Form Cell",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }],
+                    "Bosses": [{
+                        "Name": "Final Form Cell",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Perfect Cell",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }]
+                }
+            },
+            "MajinBuu": {
+                "ArcName": "MajinBuu",
+                "Age": 774,
+                "MaxMobs": 25,
+                "MaxSemiBosses": 35,
+                "MaxBosses": 45,
+                "MobData": {
+                    "NormalMob": [{
+                        "Name": "Android 19",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }],
+                    "SemiMob": [{
+                        "Name": "Android 19",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Dr Gero",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Cell 1st Form",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }],
+                    "Bosses": [{
+                        "Name": "Android 16",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Android 17",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }, {
+                        "Name": "Android 18",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CRWfU79.png",
+                        "BaseDamage": 3500
+                    }]
+                }
+            }
+        }
+    },
+    "namek": {
+        "AllSagaNames": ["Ginyuu", "Frieza"],
+        "RarityLevel": 45,
+        "Sagas": {
+            "Ginyuu": {
+                "ArcName": "Ginyuu",
+                "Age": 762,
+                "MaxMobs": 15,
+                "MaxSemiBosses": 25,
+                "MaxBosses": 10,
+                "MobData": {
+                    "NormalMob": [{
+                        "Name": "Banan",
+                        "Description": "???",
+                        "Health": 4500,
+                        "MaxHealth": 4500,
+                        "Stamina": 1100,
+                        "MaxStamina": 1100,
+                        "Moves": [{
+                                "Name": "Energy Wave",
+                                "Damage": 45,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Arm canon",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Beam Strike",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 19,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1500,
+                        "ImageURL": "https://i.imgur.com/veQLVys.png",
+                        "BaseDamage": 350
+                    }, {
+                        "Name": "Sūi",
+                        "Description": "???",
+                        "Health": 4500,
+                        "MaxHealth": 4500,
+                        "Stamina": 1100,
+                        "MaxStamina": 1100,
+                        "Moves": [{
+                                "Name": "Energy Wave",
+                                "Damage": 45,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Arm canon",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Beam Strike",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 19,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1700,
+                        "ImageURL": "https://i.imgur.com/oNCKO9J.png",
+                        "BaseDamage": 350
+                    }, {
+                        "Name": "Cui",
+                        "Description": "???",
+                        "Health": 4500,
+                        "MaxHealth": 4500,
+                        "Stamina": 1100,
+                        "MaxStamina": 1100,
+                        "Moves": [{
+                                "Name": "Full Power Energy Wave",
+                                "Damage": 90,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Bomb Strike",
+                                "Damage": 105,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Beam Strike",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 19,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1700,
+                        "ImageURL": "https://i.imgur.com/r1njG4V.png",
+                        "BaseDamage": 390
+                    }],
+                    "SemiMob": [{
+                        "Name": "Dodoria",
+                        "Description": "???",
+                        "Health": 6500,
+                        "MaxHealth": 6500,
+                        "Stamina": 2000,
+                        "MaxStamina": 2000,
+                        "Moves": [{
+                                "Name": "Dodoria Beam",
+                                "Damage": 250,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Critical Upper",
+                                "Damage": 500,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Beam Strike",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 25,
+                        "Exp": 0,
+                        "MaxExp": 6500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://i.imgur.com/Q8zV8nJ.png",
+                        "BaseDamage": 650
+                    }, {
+                        "Name": "Zarbon",
+                        "Description": "???",
+                        "Health": 9500,
+                        "MaxHealth": 9500,
+                        "Stamina": 2000,
+                        "MaxStamina": 2000,
+                        "Moves": [{
+                                "Name": "Continuous Energy Bullet",
+                                "Damage": 250,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Elegant Blaster",
+                                "Damage": 350,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Beam Strike",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 30,
+                        "Exp": 0,
+                        "MaxExp": 6500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://i.imgur.com/8wZNhE3.png",
+                        "BaseDamage": 750
+                    }],
+                    "Bosses": [{
+                        "Name": "Captain Ginyuu",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 9500,
+                        "Stamina": 2000,
+                        "MaxStamina": 2000,
+                        "Moves": [{
+                                "Name": "Crusher Ball",
+                                "Damage": 500,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Sauzer Blade",
+                                "Damage": 350,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Eraser Cannon",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 30,
+                        "Exp": 0,
+                        "MaxExp": 6500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://i.imgur.com/cHFDxBu.png",
+                        "BaseDamage": 1000
+                    }, {
+                        "Name": "Jeice",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 9500,
+                        "Stamina": 2000,
+                        "MaxStamina": 2000,
+                        "Moves": [{
+                                "Name": "Sauzer Blade",
+                                "Damage": 500,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Crusher Ball",
+                                "Damage": 350,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Spinning Blade",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 30,
+                        "Exp": 0,
+                        "MaxExp": 6500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://i.imgur.com/VXMZvAg.png",
+                        "BaseDamage": 1000
+                    }, {
+                        "Name": "Burter",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 9500,
+                        "Stamina": 2000,
+                        "MaxStamina": 2000,
+                        "Moves": [{
+                                "Name": "Purple Comet Attack",
+                                "Damage": 500,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Blue Impluse",
+                                "Damage": 350,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Space Mach Attack",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 30,
+                        "Exp": 0,
+                        "MaxExp": 6500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://i.imgur.com/YbxBvxc.png",
+                        "BaseDamage": 1000
+                    }, {
+                        "Name": "Recoome",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 9500,
+                        "Stamina": 2000,
+                        "MaxStamina": 2000,
+                        "Moves": [{
+                                "Name": "Recoome Boom",
+                                "Damage": 500,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Recoome Kick",
+                                "Damage": 350,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Recoome Death Driver",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 30,
+                        "Exp": 0,
+                        "MaxExp": 6500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://cdn.discordapp.com/attachments/502115221532311592/755494838354313316/ymYwuXI.png",
+                        "BaseDamage": 1000
+                    }, {
+                        "Name": "Guldo",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 9500,
+                        "Stamina": 2000,
+                        "MaxStamina": 2000,
+                        "Moves": [{
+                                "Name": "Time Freeze",
+                                "Damage": 500,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Bad Breath",
+                                "Damage": 350,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Telekinesis",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 30,
+                        "Exp": 0,
+                        "MaxExp": 6500,
+                        "Exp Gain": 2000,
+                        "ImageURL": "https://cdn.discordapp.com/attachments/502115221532311592/755502559120195745/unknown_4.png",
+                        "BaseDamage": 1000
+                    }]
+                }
+            },
+            "Frieza": {
+                "ArcName": "Frieza",
+                "Age": 763,
+                "MaxMobs": 25,
+                "MaxSemiBosses": 35,
+                "MaxBosses": 15,
+                "MobData": {
+                    "NormalMob": [{
+                        "Name": "First Form Frieza",
+                        "Description": "???",
+                        "Health": 8000,
+                        "MaxHealth": 8000,
+                        "Stamina": 10000,
+                        "MaxStamina": 10000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 35,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/dEyQen4.png",
+                        "BaseDamage": 1000
+                    }],
+                    "SemiMob": [{
+                        "Name": "Second Form Frieza",
+                        "Description": "???",
+                        "Health": 10000,
+                        "MaxHealth": 10000,
+                        "Stamina": 12000,
+                        "MaxStamina": 12000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 35,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/CDJgRpB.png",
+                        "BaseDamage": 1500
+                    }, {
+                        "Name": "Third Form Frieza",
+                        "Description": "???",
+                        "Health": 9000,
+                        "MaxHealth": 9000,
+                        "Stamina": 16000,
+                        "MaxStamina": 16000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/KJNjZDp.png",
+                        "BaseDamage": 2500
+                    }],
+                    "Bosses": [{
+                        "Name": "Final Form Frieza",
+                        "Description": "???",
+                        "Health": 15000,
+                        "MaxHealth": 15000,
+                        "Stamina": 20000,
+                        "MaxStamina": 20000,
+                        "Moves": [{
+                                "Name": "Death Beam",
+                                "Damage": 650,
+                                "Rarity": 35,
+                                "Type": "Ki",
+                                "StaminaUse": 95
+                            },
+                            {
+                                "Name": "Death Slash",
+                                "Damage": 100,
+                                "Rarity": 35,
+                                "Type": "Physical",
+                                "StaminaUse": 85
+                            }, {
+                                "Name": "Death Ball",
+                                "Damage": 110,
+                                "Rarity": 45,
+                                "StaminaUse": 85,
+                                "Type": "Ki"
+                            }
+                        ],
+                        "Level": 40,
+                        "Exp": 0,
+                        "MaxExp": 4500,
+                        "Exp Gain": 1100,
+                        "ImageURL": "https://i.imgur.com/zLU7GYN.png",
+                        "BaseDamage": 4000
+                    }]
+                }
+            }
+        }
+    }
+}

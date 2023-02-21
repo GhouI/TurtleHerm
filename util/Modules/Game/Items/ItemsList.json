@@ -1,0 +1,134 @@
+{
+    "Healing": [{
+            "ItemId": "1",
+            "Rarity": "Common",
+            "Cost": 50,
+            "Name": "Common Healing Potion",
+            "Description": "A simple potion that can restore a small amount of health.",
+            "Effect": 10
+        },
+        {
+            "ItemId": "2",
+            "Rarity": "Common",
+            "Cost": 75,
+            "Name": "Common Healing Salve",
+            "Description": "A basic salve that can heal wounds and restore health.",
+            "Effect": 30
+        },
+        {
+            "ItemId": "3",
+            "Rarity": "Common",
+            "Cost": 300,
+            "Name": "Common Health Draught",
+            "Description": "A standard health draught that can recover a moderate amount of health.",
+            "Effect": 65
+        },
+        {
+            "ItemId": "4",
+            "Rarity": "Uncommon",
+            "Cost": 30,
+            "Name": "Senzu Bean",
+            "Description": "A magical bean that can fully restore a person's health and energy.",
+            "Effect": 100
+        },
+        {
+            "ItemId": "5",
+            "Rarity": "Rare",
+            "Cost": 1000,
+            "Name": "Specialised Healing Ball",
+            "Description": "A Healing ball that can grant a wish for full health restoration.",
+            "Effect": 1500
+        },
+        {
+            "ItemId": "6",
+            "Rarity": "Legendary",
+            "Cost": 10000,
+            "Name": "Healing Earring",
+            "Description": "A powerful item that can instantly heal and grant the wearer increased  health.",
+            "Effect": 3500
+        }
+    ],
+    "Armor": [{
+            "ItemId": "7",
+            "Rarity": "Rare",
+            "Cost": 2500,
+            "Name": "Majin Armor Top",
+            "Description": "Armor infused with the power of the Majin race, providing increased strength and durability.",
+            "Effect": {
+                "ArmorType": "Top",
+                "EffectType": "Health",
+                "EffectValue": 900
+            }
+        }, {
+            "ItemId": "8",
+            "Rarity": "Rare",
+            "Cost": 2000,
+            "Name": "Majin Armor Helmet",
+            "Description": "Armor infused with the power of the Majin race, providing increased strength and durability.",
+            "Effect": {
+                "ArmorType": "Head",
+                "EffectType": "Health",
+                "EffectValue": 700
+            }
+        }, {
+            "ItemId": "9",
+            "Rarity": "Rare",
+            "Cost": 1500,
+            "Name": "Majin Armor Bottom",
+            "Description": "Armor infused with the power of the Majin race, providing increased strength and durability.",
+            "Effect": {
+                "ArmorType": "Bottom",
+                "EffectType": "Health",
+                "EffectValue": 600
+            }
+        },
+        {
+            "ItemId": "10",
+            "Rarity": "Uncommon",
+            "Cost": 30,
+            "Name": "Namekian Helmet",
+            "Description": "Armor made from the durable skin of the Namekian race, providing increased defense and resistance.",
+            "Effect": {
+                "ArmorType": "Head",
+                "EffectType": "Health",
+                "EffectValue": 75
+            }
+        },
+        {
+            "ItemId": "17",
+            "Rarity": "Rare",
+            "Cost": 1000,
+            "Name": "Saiyan Armor",
+            "Description": "Armor made from advanced Saiyan technology, providing increased power and resistance to energy attacks.",
+            "Effect": {
+                "ArmorType": "Top",
+                "EffectType": "Health",
+                "EffectValue": 350
+            }
+        },
+        {
+            "ItemId": "18",
+            "Rarity": "Legendary",
+            "Cost": 10000,
+            "Name": "Time Breaker Bottom",
+            "Description": "A powerful and ancient armor that can manipulate time and grant immense power to the wearer.",
+            "Effect": {
+                "ArmorType": "Bottom",
+                "EffectType": "Health",
+                "EffectValue": 10000
+            }
+        },
+        {
+            "ItemId": "13",
+            "Rarity": "Common",
+            "Cost": 50,
+            "Name": "Weighted Clothing",
+            "Description": "Heavy clothing that can increase the wearer's strength and power.",
+            "Effect": {
+                "ArmorType": "Top",
+                "EffectType": "Health",
+                "EffectValue": 76
+            }
+        }
+    ]
+}
