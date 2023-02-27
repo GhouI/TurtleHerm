@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, Butt
 const PlayerModel = require('../util/Mongoose/models/Player')
 
 module.exports = {
-    data: new SlashCommandBuilder().setName("stats").setDescription("Views your stats").addStringOption(cmd => cmd.setName("statstype").setDescription("which stats type are you looking for")),
+    data: new SlashCommandBuilder().setName("stats").setDescription("Views your stats").addStringOption(cmd => cmd.setName("statstype")),
     restricted: true,
     accountRestricted: true,
     async execute(interaction) {
