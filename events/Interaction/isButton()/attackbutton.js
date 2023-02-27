@@ -25,7 +25,6 @@ module.exports = {
             return interaction.reply({ embeds: [createTempEmbed(Player.username, Player.displayAvatarURL(), 'Red', `<@${Player.id}> It seems that you have 0 ${GetPlayerStatus}.`)] })
         }
         const PlayersAttack = await getValidAttacks(getPlayerAttacks)
-        console.log(await PlayersAttacks)
         const DataRow = new ActionRowBuilder()
             .addComponents(
                 new StringSelectMenuBuilder()

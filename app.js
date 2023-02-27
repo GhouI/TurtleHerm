@@ -38,7 +38,6 @@ client.on("ready", () => {
     }
     for (const file of ButtonFiles) {
         const ButtonFile = require(path.join(isButtonFolder, file))
-        console.log(ButtonFile.customId)
         client.ButtonEventsName.set(ButtonFile.customId, ButtonFile)
     }
     client.UtilFunctions = require('./util/functions.js')

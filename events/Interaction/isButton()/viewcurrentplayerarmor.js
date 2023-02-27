@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js')
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 const PlayerModel = require('../../../util/Mongoose/models/Player')
 const path = require('path')
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
                 Comp.push(RemoveHeadButton)
                 break;
             case typeof(PlayerArmor.Top) === 'object':
-                Comp.push(new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('removetoparmor').setLabel('Remove your top armor').setStyle(ButtonStyle.Danger)))
+                Comp.push(RemoveTopButton)
                 break;
             case typeof(PlayerArmor.Bottom) === 'object':
                 Comp.push(RemoveBottomButton)

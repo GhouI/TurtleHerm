@@ -5,9 +5,11 @@ module.exports = class Item {
         if (ItemID == null) return console.error("ItemID is not valid.");
         for (const [CategoryName, itemCategory] of Object.entries(ItemList)) {
             for (const item of itemCategory) {
-                if (item.ItemId === JSON.stringify(ItemID)) {
+                if (item.ItemId === JSON.stringify(ItemID) || item.Name === JSON.stringify(ItemID)) {
                     this.Item = item;
                     this.ItemCategory = CategoryName
+                } else {
+                    this.Item = 'Disabled'
                 }
             }
         }
@@ -36,6 +38,7 @@ module.exports = class Item {
         }
     }
     async use({ ServerID, UserID, PlayerArmor }) {
+        if (this.Item == 'Disabled') return 'Unable to find item.'
         try {
             // Find the player document
             let player = await Player.findOne({ ServerID: ServerID, UserID: UserID });
