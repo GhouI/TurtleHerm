@@ -1,5 +1,6 @@
-const { ActionRowBuilder, StringSelectMenuBuilder } = require('discord.js')
-const { PlayersAttacks, checkPlayerStatus, getValidAttacks } = require('../../../util/Modules/Game/GameModules')
+const { ActionRowBuilder, StringSelectMenuBuilder, EmbedBuilder } = require('discord.js')
+const { PlayersAttacks, checkPlayerStatus, getValidAttacks, CheckIfPlayerHasAnyMoves } = require('../../../util/Modules/Game/GameModules')
+const Duration = require('humanize-duration')
 
 
 const PlayerModel = require('../../../util/Mongoose/models/Player')
@@ -10,20 +11,42 @@ module.exports = {
     customId: path.basename(__filename, '.js'),
 
     async execute(interaction) {
+
         const client = interaction.client;
-        const { createTempEmbed } = client.UtilFunctions
         let Player = interaction.user
         let Server = interaction.guild
-        if (client.PlayerAttacked.has(Player.id + "a")) return interaction.reply({ embeds: [client.UtilFunctions.createTempEmbed(Player.username, Player.displayAvatarURL(), 'Red', "you can't attack this mob because you have already attacked.")] })
-        client.PlayerAttacked.add(Player.id + "a")
-        let { PlayerHealth, PlayerMoveSet } = await PlayerModel.findOne({ ServerID: Server.id, UserID: Player.id })
+        let APlayer = await PlayerModel.findOne({ ServerID: Server.id, UserID: Player.id })
+        if (APlayer == null || CheckIfPlayerHasAnyMoves(APlayer) == false) {
+            return interaction.reply("You can't attack because you don't have any moves.")
+        }
+        let { PlayerHealth, PlayerMoveSet } = APlayer
         let { Mob } = await ServerModel.findOne({ ServerID: Server.id })
-        if (Mob.Health == 0) return interaction.reply({ embeds: [createTempEmbed(Player.username, Player.displayAvatarURL(), 'Red', "you can't attack because the mob has 0 hp.")] })
+        if (Mob.Health == 0) {
+            let TheEmbed = new EmbedBuilder()
+                .setAuthor({
+                    name: interaction.user.username,
+                    iconURL: interaction.user.displayAvatarURL()
+                })
+                .setColor('Red')
+                .setTitle('Issue')
+                .setDescription(`${interaction.user.username}, you can't attack the mob because it has 0 HP.`)
+            return interaction.reply({ embeds: [TheEmbed] })
+        }
         let getPlayerAttacks = await PlayersAttacks(Server.id, Player.id)
         let GetPlayerStatus = await checkPlayerStatus(PlayerHealth.Health, PlayerHealth.Stamina)
         if (GetPlayerStatus == "Health" || GetPlayerStatus == "Stamina") {
-            return interaction.reply({ embeds: [createTempEmbed(Player.username, Player.displayAvatarURL(), 'Red', `<@${Player.id}> It seems that you have 0 ${GetPlayerStatus}.`)] })
+            client.PlayerAttacked.delete(Player.id + "a")
+            let TheEmbed = new EmbedBuilder()
+                .setAuthor({
+                    name: interaction.user.username,
+                    iconURL: interaction.user.displayAvatarURL()
+                })
+                .setColor('Red')
+                .setTitle('Issue')
+                .setDescription(`${interaction.user.username}, you have 0 of ${GetPlayerStatus}`)
+            return interaction.reply({ embeds: [TheEmbed] })
         }
+
         const PlayersAttack = await getValidAttacks(getPlayerAttacks)
         const DataRow = new ActionRowBuilder()
             .addComponents(

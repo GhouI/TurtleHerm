@@ -5,7 +5,7 @@ const PlayerModel = require("../util/Mongoose/models/Player");
 
 module.exports = {
     data: new SlashCommandBuilder().setName("equip").setDescription("Equip Items").addStringOption(str => str.setName('item').setDescription('Input the item name or ID to equip').setRequired(true)),
-    restricted: false,
+    restricted: true,
     async execute(interaction) {
         let User = await PlayerModel.findOne({
             ServerID: interaction.guildId,

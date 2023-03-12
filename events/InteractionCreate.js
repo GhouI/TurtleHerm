@@ -8,8 +8,9 @@ module.exports = {
     name: Events.InteractionCreate,
     async execute(interaction) {
         const client = interaction.client;
-        const { createTempEmbed } = await client.UtilFunctions
+        // const { createTempEmbed } = await client.UtilFunctions
         const ButtonEvents = await client.ButtonEventsName
+        const SelectMenuEvents = await client.SelectMenuNames
         if (interaction.isChatInputCommand()) {
 
             const command = interaction.client.commands.get(interaction.commandName)
@@ -56,7 +57,17 @@ module.exports = {
                 if (!ButtonEvent) return;
                 await ButtonEvent.execute(interaction)
             } catch (e) {
-                console.log(e.message)
+                console.log("Button Event Error:" + e)
+            }
+        } else if (interaction.isStringSelectMenu()) {
+            let SelectMenuEvent;
+
+            try {
+                SelectMenuEvent = SelectMenuEvents.find(event => event.customId == interaction.customId)
+                if (!SelectMenuEvent) return;
+                await SelectMenuEvent.execute(interaction)
+            } catch (e) {
+                console.error(e)
             }
         }
     }

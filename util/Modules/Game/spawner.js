@@ -1,5 +1,6 @@
 const { PermissionFlagsBits, EmbedBuilder, Colors, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType, StringSelectMenuBuilder } = require('discord.js')
 const Server = require('../../Mongoose/models/Server')
+const Duration = require('humanize-duration')
 
 const DataMap = new Map()
 const { RunGame, addExp, chooseNewPlanet, chooseNewSaga, chooseANewMob, getImageUrl, getMobType, PlayersAttacks } = require('./GameModules')
@@ -7,6 +8,22 @@ module.exports = async(message) => {
     if (message.author.bot) return;
     if (!message.guild.members.me.permissionsIn(message.channelId).has([PermissionFlagsBits.SendMessages])) return;
     let client = message.client
+
+    let Player = message.author.id;
+    if (client.PlayerAttacked.has(Player.id + "a")) {
+        let ResponseDuration = Duration(client.PlayerAttacked.get(Player.id + "a") - Date.now(), { units: ['h', 'm', 's'], round: true })
+        let TheEmbed = new EmbedBuilder()
+            .setAuthor({
+                name: message.member.user.username,
+                iconURL: message.member.user.displayAvatarURL()
+
+            })
+            .setColor('Red')
+            .setTitle('Issue')
+            .setDescription('You have already attacked. Sorry')
+            .addFields({ name: 'Next time you can attack.', value: ResponseDuration.toLowerCase() })
+        return interaction.reply({ embeds: { TheEmbed } })
+    }
     let Guild = await client.UtilFunctions.getGuildData(message.guildId);
     let { Mob, ServerGameSettings, MobsCount } = Guild
     let { Planet, Arc } = ServerGameSettings;

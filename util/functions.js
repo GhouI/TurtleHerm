@@ -70,7 +70,7 @@ module.exports = {
     async getGuildData(GuildID) {
         await this.connectMD();
         if (CacheGuilds.has(GuildID)) return CacheGuilds.get(GuildID);
-        let Server = await ServerSchema.findOne({ ServerID: "1031613302289215559" })
+        let Server = await ServerSchema.findOne({ ServerID: GuildID })
             .lean()
             .exec();
         CacheGuilds.set(GuildID, Server);

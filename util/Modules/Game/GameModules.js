@@ -179,6 +179,8 @@ module.exports = {
         }
         if (Bosses < MaxBosses) {
             availableTypes.push("Bosses");
+        } else if (MaxBosses == undefined) {
+            availableTypes.push("None")
         }
         // Return the first available mob type, or "None" if no types are available
         return availableTypes[0] || "None";
@@ -205,8 +207,8 @@ module.exports = {
 
     },
     async addExp(serverId, userId, exp) {
-        const player = await Player.findOneAndUpdate({ ServerID: serverId, UserID: userId }, { $inc: { Exp: exp } }, { returnNewDocument: true });
-
+        const player = await Player.findOne({ ServerID: serverId, UserID: userId });
+        player.Exp = exp
         if (!player) {
             throw new Error(`Player with server ID ${serverId} and user ID ${userId} not found.`);
         }
@@ -219,6 +221,7 @@ module.exports = {
                 details.PlayerHealth.MaxHealth = Math.floor(details.PlayerHealth.MaxHealth * 1.3);
                 details.PlayerHealth.Health = Math.floor(details.PlayerHealth.MaxHealth);
                 details.PlayerHealth.MaxStamina = Math.floor(details.PlayerHealth.MaxStamina * 1.3);
+                details.PlayerHealth.Stamina = details.PlayerHealth.MaxStamina
                 details.PlayerHealth.MaxKi = Math.floor(details.PlayerHealth.MaxKi * 1.3);
                 details.PlayerHealth.Ki = Math.floor(details.PlayerHealth.MaxKi);
                 details.PlayerStats.RP += 5;
@@ -232,6 +235,8 @@ module.exports = {
                 details.PlayerHealth.MaxStamina = Math.floor(details.PlayerHealth.MaxStamina * 1.3);
                 details.PlayerHealth.MaxKi = Math.floor(details.PlayerHealth.MaxKi * 1.3);
                 details.PlayerHealth.Ki = Math.floor(details.PlayerHealth.MaxKi);
+                details.PlayerHealth.Stamina = details.PlayerHealth.MaxStamina
+
                 details.PlayerStats.RP += 5;
                 details.Zeni += 2500;
             }
@@ -248,6 +253,7 @@ module.exports = {
                 break;
             }
         }
+        await Player.updateOne({ ServerID: serverId, UserID: userId }, { $set: player })
     },
 
     async AttackExists(name) {
@@ -271,9 +277,45 @@ module.exports = {
         }
         return null;
     },
+    async CalculatePlayerDamage(Damage, PlayerDoc, MoveType) {
+        let StrengthWorth = 0.75
+        let KiControlWorth = 1.25
+        let { PlayerStats } = await PlayerDoc
+        let { Strength, "Ki Control": KiControl } = PlayerStats
+        let FinalDamage = Damage
+        let FinalPlayerKi = 0
+        let FinalPlayerStrength = 0
+        switch (MoveType) {
+            case "Ki":
+                FinalPlayerKi = KiControl * KiControlWorth
+                FinalDamage += FinalPlayerKi
+                break
+            case "Strength":
+                FinalPlayerStrength = Strength * StrengthWorth
+                FinalDamage += FinalPlayerStrength
+                break
+            case "Weapon":
 
+                FinalPlayerStrength = Strength * StrengthWorth
+                FinalDamage += FinalPlayerStrength
+                break
+        }
+        return FinalDamage
+    },
+    async CalculateMobDamage(Damage, MobDoc) {
+        let { BaseDamage } = await MobDoc
+        let FinalDamage = Damage + BaseDamage
+        return FinalDamage
 
-
-
+    },
+    async CheckIfPlayerHasAnyMoves(Playerdoc) {
+        if (Playerdoc.PlayerInventoryMoves.length == 0) {
+            return false;
+        }
+        let { PlayerMoveSet } = Playerdoc
+        let { S1, S2, S3, S4 } = PlayerMoveSet
+        let hasnomoves = S1 !== "None" || S2 !== "None" || S3 !== "None" || S4 !== "None";
+        return hasnomoves
+    }
 
 }

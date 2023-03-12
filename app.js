@@ -7,12 +7,14 @@ const path = require('node:path')
 const eventsFolder = path.join(__dirname, 'events')
 const CommandsFolder = path.join(__dirname, 'Commands')
 const isButtonFolder = path.join(__dirname, 'events', 'Interaction', 'isButton()');
+const isStringSelectMenu = path.join(__dirname, 'events', 'Interaction', 'isStringSelectMenu()');
 const evntsFiles = fs.readdirSync(eventsFolder).filter(file => file.endsWith('.js'))
 const cmdFiles = fs.readdirSync(CommandsFolder).filter(file => file.endsWith('.js'))
 const ButtonFiles = fs.readdirSync(isButtonFolder).filter(file => file.endsWith('.js'))
-
+const SelectMenuFiles = fs.readdirSync(isStringSelectMenu).filter(file => file.endsWith('.js'))
 client.commands = new Collection()
 client.ButtonEventsName = new Collection()
+client.SelectMenuNames = new Collection()
 
 
 
@@ -40,10 +42,14 @@ client.on("ready", () => {
         const ButtonFile = require(path.join(isButtonFolder, file))
         client.ButtonEventsName.set(ButtonFile.customId, ButtonFile)
     }
+    for (const file of SelectMenuFiles) {
+        const SelectMenuFile = require(path.join(isStringSelectMenu, file))
+        client.SelectMenuNames.set(SelectMenuFile.customId, SelectMenuFile)
+    }
     client.UtilFunctions = require('./util/functions.js')
     client.UtilFunctions.init(client)
     client.cooldown = new Set()
-    client.PlayerAttacked = new Set();
+    client.PlayerAttacked = new Collection();
 })
 
 client.login("MTAzMjAxNDA4OTUxOTY0ODc2OA.GT_jMF.n3NR3Xs8O2Va-se-Npb84ziKPya7cgSLWJMljI")
