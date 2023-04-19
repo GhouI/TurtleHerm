@@ -1,6 +1,6 @@
 const { Client, GatewayIntentBits, Collection, Events, PermissionFlagsBits } = require('discord.js')
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] })
-
+const ClientKey = "";
 const fs = require('node:fs')
 const path = require('node:path')
 
@@ -43,4 +43,4 @@ client.on("ready", () => {
     client.MobAttack = new Set()
 })
 
-client.login("MTAzMjAxNDA4OTUxOTY0ODc2OA.GT_jMF.n3NR3Xs8O2Va-se-Npb84ziKPya7cgSLWJMljI")
+client.login(ClientKey)
