@@ -2,6 +2,7 @@
 This is for my final year Project.
 
 # How to install the discord bot?
+These are the instructions on how to install the Discord RPG Bot.
 # Downloading Node JS and All the packages.
 1. [Download latest version of Node JS.](https://nodejs.org/en)
 2. Download this repo from above as a zip.
@@ -21,3 +22,18 @@ This is for my final year Project.
 11. Open a terminal in your IDE and do `nodemon app.js`.
 If you have any concerns I suggest joining [the support discord.js server for help](https://discord.gg/djs)
 
+# How to invite the discord bot to your server?
+1. [Go to this page](https://discord.com/developers/applications/)
+2. Select the Application of your bot.
+3. On the Side Page Click `OAuth2`
+4. Two Options should show up. `General` and `URL Generator`. Click `URL Generator`.
+5. In the Scope section click bot.
+6. In the bot permission click Adminsitrator.
+7. In the bottom there should be a text box saying `Generated URL`. Click Copy to copy the link.
+An Example of how it should look like. ![An Example of how it should look like](https://i.imgur.com/ZLyA1e8.png)
+8. Go to the copied URL and Select the server you want to put it in.
+9. Do the Captcha.
+10. The bot should be in your Server and Running.
+
+# How to use the application?
+1. First of all you are going to need to change some configurations.
